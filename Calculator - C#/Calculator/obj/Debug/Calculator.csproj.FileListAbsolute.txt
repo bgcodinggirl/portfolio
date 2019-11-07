@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\bin\Debug\Calculator.exe
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\bin\Debug\Calculator.pdb
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\obj\Debug\Calculator.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\obj\Debug\Calculator.csproj.GenerateResource.Cache
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\obj\Debug\Calculator.exe
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\user\Desktop\Програмиране\OOP2-C#\Calculator\Calculator\obj\Debug\Calculator.Calculator.resources
