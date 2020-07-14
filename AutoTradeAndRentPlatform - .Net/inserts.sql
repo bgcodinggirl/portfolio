@@ -1,0 +1,112 @@
+USE AutoTrade
+
+INSERT INTO EMPLOYEES
+VALUES ('admin', 'adminpass', 'Administrator', 'Administrator','0899417285','auto_tradeadm@abv.bg')
+
+INSERT INTO EMPLOYEES
+VALUES ('sani', 'sanipass', 'Sanie', 'Mehmet','0899616894','sanie_1998@abv.bg')
+
+INSERT INTO EMPLOYEES
+VALUES ('dobrevam', 'mariapass', 'Maria', 'Dobreva','0874516527','maria_d@abv.bg')
+
+INSERT INTO EMPLOYEES
+VALUES ('thunder', 'kaloyanpass', 'Kaloyan', 'Nikolov','0873512498','nikolov91@abv.bg')
+
+
+INSERT INTO CUSTOMERS
+VALUES('Иван','Димитров','0879512387','7105096558','Plovdiv','2')
+
+INSERT INTO CUSTOMERS
+VALUES('Симона','Дечева','0874512365','9615027759','Haskovo','3')
+
+INSERT INTO CUSTOMERS
+VALUES('Ивана','Колева','0894716388','9026078853','Plovdiv','3')
+
+INSERT INTO CUSTOMERS
+VALUES('Петър','Мулетаров','0880403657','6712122554','Pazardzhik','3')
+
+INSERT INTO CUSTOMERS
+VALUES('Габриела','Караманова','0871239874','8203038417','Haskovo','4')
+
+INSERT INTO CUSTOMERS
+VALUES('Георги','Янкулов','0894563198','7506013246','Sofia','4')
+
+
+INSERT INTO CARS
+VALUES('Opel','Corsa',2010,9500,'black')
+
+INSERT INTO CARS
+VALUES('AUDI','A3',2004,4300,'gray')
+
+INSERT INTO CARS
+VALUES('Mercedes','C 30 AMG',2015,150000,'black')
+
+INSERT INTO CARS
+VALUES('BMW','X5',2008,24000,'white')
+
+INSERT INTO CARS
+VALUES('AUDI','A8',2017,81450,'white')
+
+INSERT INTO CARS
+VALUES('VW','Golf',2000,2500,'black')
+
+INSERT INTO CARS
+VALUES('Opel','Astra',2005,5000,'white')
+
+INSERT INTO CARS
+VALUES('Suzuki','Swift',2007,7200,'blue')
+
+INSERT INTO CARS
+VALUES('Mercedes','270',2002,1800,'darkgray')
+
+INSERT INTO CARS
+VALUES('BMW','X7',2015,90000,'black')
+
+INSERT INTO CARS
+VALUES('AUDI','A7 Sportback',2019,230000,'white')
+
+INSERT INTO CARS
+VALUES('VW','Passat',2003,3200,'gray')
+
+INSERT INTO CARS
+VALUES('Mazda','3',2009,10000,'red')
+
+INSERT INTO CARS
+VALUES('Seat','Ibiza',1998,1200,'red')
+
+
+INSERT INTO SALES
+VALUES('321456',3,'Mercedes C 30 AMG',1,'01-06-2016',2)
+
+INSERT INTO SALES
+VALUES('540397',12,'VW Passat',2,'07-22-2010',3)
+
+INSERT INTO SALES
+VALUES('542145',7,'Opel Astra',3,'10-09-2013',3)
+
+INSERT INTO SALES
+VALUES('746218',11,'AUDI A7 Sportback',4,'02-09-2019',3)
+
+INSERT INTO SALES
+VALUES('154847',1,'Opel Corsa',5,'04-26-2016',4)
+
+INSERT INTO SALES
+VALUES('145568',14,'Seat Ibiza',6,'06-06-2014',4)
+
+INSERT INTO RENTACAR
+VALUES(3,100,'not rented')
+
+INSERT INTO RENTACAR
+VALUES(6,22,'not rented')
+
+INSERT INTO RENTACAR
+VALUES(7,30,'not rented')
+
+INSERT INTO RENTACAR
+VALUES(8,43,'not rented')
+
+INSERT INTO RENTACAR
+VALUES(13,45,'not rented')
+
+INSERT INTO RENTS
+VALUES(2,3,'02-02-2020','09-02-2020',154,2);

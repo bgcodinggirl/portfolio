@@ -1,0 +1,77 @@
+﻿@model AutoTradeAndRentPlatform.ViewModels.Cars.EditVM
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<fieldset>
+        <legend>Cars</legend>
+
+        <form action="/Cars/Edit" method="post">
+            @Html.HiddenFor(m => m.Id)
+            <table>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Make)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Make)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.Make, null, new { style = "color:red" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Marka)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Marka)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.Marka, null, new { style = "color:red" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Year)
+                    </td>
+                    <td>
+                        @Html.EditorFor(m => m.Year)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.Year, null, new { style = "color:red" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Price)
+                    </td>
+                    <td>
+                        @Html.EditorFor(m => m.Price)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.Price, null, new { style = "color:red" })
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        @Html.LabelFor(m => m.Color)
+                    </td>
+                    <td>
+                        @Html.TextBoxFor(m => m.Color)
+                    </td>
+                    <td>
+                        @Html.ValidationMessageFor(m => m.Color, null, new { style = "color:red" })
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input style="float:right;" type="submit" value="Save" />
+                        <a href="/Cars/Index">Back to list</a>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+

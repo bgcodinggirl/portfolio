@@ -1,0 +1,33 @@
+﻿@model AutoTradeAndRentPlatform.ViewModels.Customers.IndexVM
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+<a href="/Customers/Edit">New</a>
+<table>
+    <tr>
+        <td style="margin:1px 80px;text-align:center;">Id</td>
+        <td style="margin:1px 80px;text-align:center;">First Name</td>
+        <td style="margin:1px 80px;text-align:center;">Last Name</td>
+        <td style="margin:1px 80px;text-align:center;">EGN</td>
+        <td style="margin:1px 80px;text-align:center;">Phone</td>
+        <td style="margin:1px 80px;text-align:center;">Address</td>
+        <td></td>
+    </tr>
+    @foreach (Customer client in Model.Clients)
+    {
+        <tr>
+            <td style="margin:1px 50px;text-align:center;">@client.Id</td>
+            <td style="margin:1px 50px;text-align:center;">@client.FirstName</td>
+            <td style="margin:1px 50px;text-align:center;">@client.LastName</td>
+            <td style="margin:1px 50px;text-align:center;">@client.EGN</td>
+            <td style="margin:1px 50px;text-align:center;">@client.Phone</td>
+            <td style="margin:1px 50px;text-align:center;">@client.Address</td>
+            <td>
+                <a href="/Customers/Edit?id=@client.Id">edit</a>
+                <a href="/Customers/Delete?id=@client.Id">delete</a>
+            </td>
+        </tr>
+    }
+</table>
+
+

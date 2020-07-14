@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<a href="/Cars/Edit">New</a>
+<table>
+    <tr>
+        <td style="margin:1px 80px;text-align:center;">Id</td>
+        <td style="margin:1px 80px;text-align:center;">Make</td>
+        <td style="margin:1px 80px;text-align:center;">Model</td>
+        <td style="margin:1px 80px;text-align:center;">Year</td>
+        <td style="margin:1px 80px;text-align:center;">Price</td style="margin:1px>
+        <td style="margin:1px 80px;text-align:center;">Color</td>
+        <td style="margin:1px 80px;text-align:center;"></td>
+    </tr>
+    @foreach (Car item in (List<Car>)ViewData["cars"])
+    {
+        <tr>
+            <td style="margin:1px 50px;text-align:center;">@item.Id</td>
+            <td style="margin:1px 50px;text-align:center;">@item.Make</td>
+            <td style="margin:1px 50px;text-align:center;">@item.Model</td>
+            <td style="margin:1px 50px;text-align:center;">@item.Year</td>
+            <td style="margin:1px 50px;text-align:center;">@item.Price</td>
+            <td style="margin:1px 50px;text-align:center;">@item.Color</td>
+            <td>
+                <a href="/Cars/Edit?id=@item.Id">edit</a>
+                <a href="/Cars/Delete?id=@item.Id">delete</a>
+            </td>
+        </tr>
+    }
+</table>
+

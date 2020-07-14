@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<a href="/Rents/Edit">New</a>
+<table>
+    <tr>
+        <td style="margin:1px 100px;text-align:center;">Car id</td>
+        <td style="margin:1px 120px;text-align:center;">Customer id</td>
+        <td style="margin:1px 100px;text-align:center;">Start date</td>
+        <td style="margin:1px 100px;text-align:center;">End date</td>
+        <td style="margin:1px 100px;text-align:center;">Price in total</td>
+        <td style="margin:1.2px 120px;text-align:center;">Employee id</td>
+        <td style="margin:1px 100px;text-align:center;">Employee name</td>
+        <td></td>
+    </tr>
+    @foreach (Rent item in (List<Rent>)ViewData["rents"])
+    {
+<tr>
+    <td style="margin:1px 70px;text-align:center;">@item.CarId</td>
+    <td style="margin:1px 70px;text-align:center;">@item.CustomerId</td>
+    <td style="margin:1px 100px;text-align:center;">@item.RentStartDate</td>
+    <td style="margin:1px 100px;text-align:center;">@item.RentEndDate</td>
+    <td style="margin:1px 70px;text-align:center;">@item.PriceInTotal</td>
+    <td style="margin:1px 70px;text-align:center;">@item.EmployeeId</td>
+    <td style="margin:1px 70px;text-align:center;">@item.EmployeeName</td>
+    <td>
+        <a href="/Rents/Edit?id=@item.Id">edit</a>
+        <a href="/Rents/Delete?id=@item.Id">delete</a>
+    </td>
+</tr>
+    }
+</table>
+
+

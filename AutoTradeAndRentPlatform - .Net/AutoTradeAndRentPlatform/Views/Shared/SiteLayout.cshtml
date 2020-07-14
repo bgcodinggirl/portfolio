@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <table style="width:100%">
+            <tr>
+                <td>
+                    <h1 style="float:left; font-size:55px; font-family: fontawesome;letter-spacing:1.5px; color:#4CAF50; margin:0%">
+                        Autotrade and rent platform
+                    </h1>
+                    <div style="float:right;margin:10px 0">
+                        Hello,
+                        <span style="font-weight:bold;">
+                            @(Session["loggedEmployee"] == null ?
+                                        "Anonymous" :
+                                        ((Employee)Session["loggedEmployee"]).Username)
+                        </span>
+                        @if (Session["loggedEmployee"] == null)
+                        {
+                            <a style="margin:0 10px;" href="/Home/Login">Login</a>
+                        }
+                        else
+                        {
+                            <a style="margin:0 10px;" href="/Home/Logout">Logout</a>
+                        }
+                    </div>
+                </td>
+            </tr>
+            <tr style="background-color:rgb(95, 95, 95)">
+                <td>
+                    <ul style="list-style:none;">
+                        <li style="float:left;margin:0 50px; padding:5px 30px 15px 30px; ">
+                            <a href="/Home/Index" style="color:#ffffff; text-align:center;">Home</a>
+                        </li>
+                        <li style="float:left; margin:0 50px; padding:5px 30px 15px 30px; ">
+                            <a href="/Employees/Index" style="color:#ffffff;text-align:center;">Employees</a>
+                        </li>
+                        <li style="float:left;margin:0 50px; padding:5px 30px 15px 30px; ">
+                            <a href="/Customers/Index" style="color:#ffffff;text-align:center;">Customers</a>
+                        </li>
+                        <li style="float:left;margin:0 50px; padding:5px 30px 15px 30px;">
+                            <a href="/Cars/Index" style="color:#ffffff;text-align:center;">Cars</a>
+                        </li>
+                        <li style="float:left;margin:0 50px; padding:5px 30px 15px 30px;">
+                            <a href="/RentACar/Index" style="color:#ffffff;text-align:center;">Rent a car</a>
+                        </li>
+                        <li style="float:left;margin:0 50px; padding:5px 30px 15px 30px;">
+                            <a href="/Sales/Index" style="color:#ffffff;text-align:center;">Sales</a>
+                        </li>
+                        <li style="float:left;margin:0 50px; padding:5px 30px 15px 30px;">
+                            <a href="/Rents/Index" style="color:#ffffff;text-align:center;">Rents</a>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @RenderBody()
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

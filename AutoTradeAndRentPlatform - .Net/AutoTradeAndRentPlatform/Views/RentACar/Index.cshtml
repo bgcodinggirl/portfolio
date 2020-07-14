@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<a href="/RentACar/Edit">New</a>
+<table>
+    <tr>
+        <td style="margin:1px 80px;text-align:center;">Car id</td>
+        <td style="margin:1px 80px;text-align:center;">Make and model</td>
+        <td style="margin:1px 80px;text-align:center;">Year</td>
+        <td style="margin:1px 80px;text-align:center;">Price per day</td>
+        <td style="margin:1px 80px;text-align:center;">Status</td>
+        <td style="margin:1px 80px;text-align:center;"></td>
+    </tr>
+    @foreach (RentACar item in (List<RentACar>)ViewData["rentacar"])
+    {
+<tr>
+    <td style="margin:1px 50px;text-align:center;">@item.CarId</td>
+    <td style="margin:1px 50px;text-align:center;">@item.CarName</td>
+    <td style="margin:1px 50px;text-align:center;">@item.CarYear</td>
+    <td style="margin:1px 50px;text-align:center;">@item.PricePerDay</td>
+    <td style="margin:1px 50px;text-align:center;">@item.Status</td>
+    <td>
+        <a href="/RentACar/Edit?id=@item.Id">edit</a>
+        <a href="/RentACar/Delete?id=@item.Id">delete</a>
+    </td>
+</tr>
+    }
+</table>
+
+
+

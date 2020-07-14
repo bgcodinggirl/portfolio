@@ -1,0 +1,44 @@
+﻿@model AutoTradeAndRentPlatform.ViewModels.Home.LoginVM
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<fieldset>
+    <legend>Login</legend>
+
+    <form action="/Home/Login" method="post">
+        @Html.ValidationMessage("AuthenticationFailed", new { style = "color:red" })
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Username)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Username)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Username, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Password)
+                </td>
+                <td>
+                    @Html.PasswordFor(m => m.Password)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Password, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input style="float:right;" type="submit" value="Login" />
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+

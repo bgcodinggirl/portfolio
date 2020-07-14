@@ -1,0 +1,57 @@
+﻿@model AutoTradeAndRentPlatform.ViewModels.RentACar.EditVm
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+
+<fieldset>
+    <legend>Rent a car</legend>
+
+    <form action="/RentACar/Edit" method="post">
+        @Html.HiddenFor(m => m.Id)
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.CarId)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.CarId)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.CarId, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.PricePerDay)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.PricePerDay)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.PricePerDay, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Status)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.Status)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Status, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input style="float:right;" type="submit" value="Save" />
+                    <a href="/RentACar/Index">Back to list</a>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+

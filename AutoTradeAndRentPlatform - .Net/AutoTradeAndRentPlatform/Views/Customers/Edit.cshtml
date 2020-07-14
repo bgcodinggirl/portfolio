@@ -1,0 +1,80 @@
+﻿@model AutoTradeAndRentPlatform.ViewModels.Customers.EditVM
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<fieldset>
+    <legend>Customers</legend>
+
+    <form action="/Customers/Edit" method="post">
+        @Html.HiddenFor(m => m.Id)
+        @Html.HiddenFor(m => m.EmployeeId)
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.FirstName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.FirstName)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.FirstName, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.LastName)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.LastName)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.LastName, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.EGN)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.EGN)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.EGN, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Phone)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Phone)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Phone, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.Address)
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.Address)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.Address, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input style="float:right;" type="submit" value="Save" />
+                    <a href="/Customers/Index">Back to list</a>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+

@@ -1,0 +1,82 @@
+﻿@model AutoTradeAndRentPlatform.ViewModels.Rents.EditVmR
+@{
+    Layout = "~/Views/Shared/SiteLayout.cshtml";
+}
+
+<fieldset>
+    <legend>Rents</legend>
+
+    <form action="/Rents/Edit" method="post">
+        @Html.HiddenFor(m => m.EmployeeId)
+        @Html.HiddenFor(m => m.Id)
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.CarId)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.CarId)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.CarId, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.CustomerId)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.CustomerId)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.CustomerId, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.RentStartDate)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.RentStartDate)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.RentStartDate, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.RentEndDate)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.RentEndDate)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.RentEndDate, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.PriceInTotal)
+                </td>
+                <td>
+                    @Html.EditorFor(m => m.PriceInTotal)
+                </td>
+                <td>
+                    @Html.ValidationMessageFor(m => m.PriceInTotal, null, new { style = "color:red" })
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input style="float:right;" type="submit" value="Save" />
+                    <a href="/Rents/Index">Back to list</a>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+
+
+
+
